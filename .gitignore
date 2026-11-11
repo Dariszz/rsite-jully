@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.vercel
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
+
+# Material privado (não vai para o GitHub)
+Manual de Consulta.pdf
+paleta de cores.jpeg
+previa.html
