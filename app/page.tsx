@@ -129,9 +129,14 @@ export default function Pagina() {
         <div className="hero-texto miolo">
           <p className="hero-local">
             Nutricionista em {cidadesLista} e online
+            {site.crn && <span className="hero-crn">{site.crn}</span>}
           </p>
-          <h1>
-            Mais que alimentação, uma vida com <em>propósito</em>.
+          <h1 className="hero-especialidades">
+            {site.especialidades.map((e, i) => (
+              <span key={e}>
+                {i === site.especialidades.length - 1 ? <em>{e}</em> : e}
+              </span>
+            ))}
           </h1>
           <p className="hero-apoio">
             Acompanhamento nutricional feito a partir da sua rotina, do que
@@ -170,6 +175,7 @@ export default function Pagina() {
             )}
             <div className="sobre-texto">
               <h2>Prazer, sou a Jully.</h2>
+              {site.crn && <p className="sobre-crn">Nutricionista · {site.crn}</p>}
               <p>
                 Sou nutricionista formada pela Universidade Federal de Juiz de
                 Fora (UFJF) e pós-graduanda em Obesidade e Emagrecimento.

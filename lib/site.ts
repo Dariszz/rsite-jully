@@ -13,14 +13,17 @@ export const site = {
   uf: "MG",
 
   // Preencha quando tiver. Enquanto estiver vazio, não aparece no site.
-  crn: "", // ex.: "CRN-9 00000"
+  crn: "CRN9 39387/P",
   instagram: "jullyg.almeida", // sem @
 
   // Enquanto o CRN não sai, o site convida para a lista de espera.
   // Quando os atendimentos começarem, deixe vazio ("") e o site passa a
   // mostrar o pedido de agendamento e o formulário de feedback.
-  listaDeEspera: "https://forms.gle/9iBj3CoF9G4JrnH17",
+  listaDeEspera: "", // antes: "https://forms.gle/9iBj3CoF9G4JrnH17"
   url: "", // ex.: "https://www.jullygoncalves.com.br"
+
+  // Áreas de atuação, mostradas em destaque no topo do site.
+  especialidades: ["Obesidade", "Emagrecimento", "Saúde metabólica"],
 
   // Mude para false se preferir o site sem a foto.
   mostrarFoto: true,
