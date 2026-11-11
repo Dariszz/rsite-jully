@@ -166,7 +166,7 @@ export default function Pagina() {
               <h2>Prazer, sou a Jully.</h2>
               <p>
                 Sou nutricionista formada pela Universidade Federal de Juiz de
-                Fora (UFJF) e pós-graduada em Obesidade e Emagrecimento.
+                Fora (UFJF) e pós-graduanda em Obesidade e Emagrecimento.
                 Acredito em uma nutrição baseada em ciência, mas que faça
                 sentido na vida real.
               </p>
