@@ -88,57 +88,23 @@ h2 {
   margin-bottom: 1.6rem;
 }
 
-/* Título em dois tons, como no manual: segunda parte em itálico dourado. */
-h1 em,
-h2 em {
-  display: block;
+h1 em {
   font-style: italic;
-  color: var(--ouro-texto);
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 1px;
-  margin-top: 1.5rem;
-  background: var(--ouro);
 }
 
 h3 {
-  font-family: var(--font-texto);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 p + p {
   margin-top: 1.1rem;
-}
-
-.rotulo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.1rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
-.rotulo::after {
-  content: "";
-  width: 4.5rem;
-  height: 1px;
-  background: var(--ouro);
-}
-
-.manuscrito {
-  font-family: var(--font-script);
-  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
-  line-height: 1.25;
-  color: var(--ouro-texto);
 }
 
 .marca {
@@ -203,13 +169,16 @@ p + p {
   border: 1px solid transparent;
   border-radius: 999px;
   font: inherit;
-  font-size: 0.82rem;
+  font-size: 0.98rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.12s;
+}
+
+.botao:active {
+  transform: scale(0.97);
 }
 
 .botao-claro {
@@ -331,9 +300,7 @@ p + p {
 .topo ul {
   display: flex;
   gap: 2.2rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
 }
 
 .topo ul a {
@@ -359,10 +326,8 @@ p + p {
 }
 
 .hero-local {
-  margin-bottom: 1.5rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
   color: var(--bege);
   animation-delay: 3.1s;
 }
@@ -370,10 +335,6 @@ p + p {
 .hero h1 {
   font-size: clamp(2.7rem, 5.6vw, 4.6rem);
   animation-delay: 3.25s;
-}
-
-.hero h1 em {
-  color: #d2bc8c;
 }
 
 .hero-apoio {
@@ -484,210 +445,153 @@ p + p {
   border-radius: 12rem 12rem 1.25rem 1.25rem;
 }
 
-.pilares {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 2rem;
-  max-width: 34rem;
-  margin-top: 2.4rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+.assinatura {
+  margin-top: 1.6rem;
+  font-family: var(--font-script);
+  font-size: 3.8rem;
+  line-height: 1;
+  color: var(--ouro-texto);
 }
 
-.pilares li {
-  padding-block: 1rem;
-  border-top: 1px solid var(--ouro);
-}
-
-/* Consulta */
+/* Consulta: percurso em cinco etapas */
 
 .consulta {
-  background: linear-gradient(var(--off), #f1ecdf);
-}
-
-.consulta-grade {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: clamp(2.5rem, 7vw, 6rem);
+  background: #f1ecdf;
 }
 
 .consulta-intro {
-  align-self: start;
-  position: sticky;
-  top: 3rem;
-}
-
-.consulta-intro .manuscrito {
-  margin-top: 2.2rem;
+  max-width: 38rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .etapas {
-  border-left: 1px solid var(--ouro);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+  border-top: 1px solid var(--ouro);
 }
 
 .etapas li {
   position: relative;
-  display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-  padding: 0 0 2.4rem 2rem;
-}
-
-.etapas li + li {
-  padding-top: 2.4rem;
-}
-
-.etapas li + li > div {
-  position: relative;
-}
-
-.etapas li + li > div::before {
-  content: "";
-  position: absolute;
-  top: -2.4rem;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgb(180 154 104 / 0.5);
-}
-
-.etapas li:last-child {
-  padding-bottom: 0;
+  padding-top: 1.8rem;
 }
 
 .etapas li::before {
   content: "";
   position: absolute;
-  left: -4.5px;
-  top: 1.7rem;
+  top: -4.5px;
+  left: 0;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--ouro);
 }
 
-.etapas li + li::before {
-  top: 4.1rem;
-}
-
 .etapa-numero {
+  display: block;
   font-family: var(--font-display);
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   line-height: 1;
-  color: var(--ouro);
+  color: var(--ouro-texto);
 }
 
 .etapas h3 {
-  margin: 0.5rem 0 0.6rem;
+  margin: 1rem 0 0.6rem;
+  font-size: 1.25rem;
 }
 
-/* Plano alimentar */
+.etapas p {
+  font-size: 0.95rem;
+}
 
-.plano {
+/* O que você leva */
+
+.leva {
   background: var(--bege);
 }
 
-.plano-grade {
+.leva-grade {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 7vw, 6rem);
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-top: 0.8rem;
 }
 
-.recebe {
-  padding: clamp(1.8rem, 4vw, 3rem);
-  background: var(--off);
-  border-radius: 1.25rem 6rem 1.25rem 1.25rem;
-}
-
-.recebe h3 {
+.leva h3 {
   margin-bottom: 0.8rem;
 }
 
-.recebe li {
-  padding: 1rem 0 1rem 2.1rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 17C3 9 8 3 17 3c0 9-6 14-14 14Z' fill='none' stroke='%23b49a68' stroke-width='1.3'/%3E%3Cpath d='M3 17 12 8' stroke='%23b49a68' stroke-width='1.3'/%3E%3C/svg%3E")
-    no-repeat 0 1.25rem / 1.15rem;
-}
-
-.recebe li + li {
-  border-top: 1px solid var(--bege);
-}
-
-/* Suporte */
-
-.suporte {
-  background: var(--oliva);
-  color: var(--off);
-}
-
-.suporte h2 em {
-  color: #d2bc8c;
-}
-
-.suporte-grade {
-  display: grid;
-  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  gap: clamp(2.5rem, 7vw, 6rem);
-  align-items: center;
-}
-
-.suporte-grade p:not(.rotulo) {
-  max-width: 34rem;
-  color: var(--bege);
-}
-
-.confere li {
-  padding: 1rem 0 1rem 2.6rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10.5' fill='none' stroke='%23d2bc8c' stroke-width='1.2'/%3E%3Cpath d='m7.5 12.3 3 3 6-6.4' fill='none' stroke='%23d2bc8c' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-    no-repeat 0 1.05rem / 1.6rem;
-}
-
-.confere li + li {
-  border-top: 1px solid rgb(247 244 238 / 0.16);
+.leva p {
+  max-width: 32rem;
 }
 
 /* Onde atendo */
 
-.locais {
+.atendimento {
+  background: var(--oliva);
+  color: var(--off);
+}
+
+.atendimento-grade {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 3rem;
-  border-top: 1px solid var(--ouro);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(2.5rem, 7vw, 6rem);
 }
 
-.locais article {
-  padding: 2.2rem 2rem 0.5rem 0;
+.atendimento h2 {
+  grid-column: 1;
 }
 
-.locais article + article {
-  padding-left: 2rem;
-  border-left: 1px solid rgb(180 154 104 / 0.5);
+.atendimento-nota {
+  grid-column: 1;
+  max-width: 24rem;
+  color: var(--bege);
 }
 
-.locais .rotulo {
-  color: var(--ouro-texto);
+.locais {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  border-top: 1px solid rgb(247 244 238 / 0.2);
 }
 
-.locais .rotulo::after {
-  content: none;
+.locais li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 1.5rem;
+  padding-block: 1.3rem;
+  border-bottom: 1px solid rgb(247 244 238 / 0.2);
 }
 
-.locais h3 {
-  margin-bottom: 0.8rem;
+.local-nome {
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  letter-spacing: 0;
-  text-transform: none;
-  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  line-height: 1.1;
+}
+
+.local-tipo {
+  font-size: 0.95rem;
+  color: #d2bc8c;
 }
 
 /* Agendamento e feedback */
 
-.agendar {
-  background: linear-gradient(#f1ecdf, var(--off));
+.espera-miolo {
+  display: grid;
+  justify-items: start;
+  gap: 1.4rem;
+  max-width: 40rem;
+}
+
+.espera-miolo h2 {
+  margin-bottom: 0;
+}
+
+.espera-miolo a:not(.botao) {
+  color: var(--ouro-texto);
+  text-underline-offset: 0.2em;
 }
 
 .agendar-grade {
@@ -707,12 +611,7 @@ p + p {
   padding: clamp(1.6rem, 4vw, 2.75rem);
   background: #fffdf9;
   border: 1px solid var(--bege);
-  border-radius: 6rem 1.25rem 1.25rem 1.25rem;
-}
-
-.formulario.espera {
-  justify-items: start;
-  padding-top: clamp(2.8rem, 6vw, 4rem);
+  border-radius: 1.25rem;
 }
 
 .formulario .campo:first-child {
@@ -911,10 +810,12 @@ p + p {
   text-align: center;
 }
 
-.rodape .manuscrito {
-  max-width: 34rem;
-  margin: 0 auto 2.2rem;
-  color: #d2bc8c;
+.rodape-chamada {
+  margin-bottom: 1.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  line-height: 1.2;
+  color: var(--off);
 }
 
 .rodape-base {
@@ -954,6 +855,12 @@ p + p {
   animation: surgir 0.9s 3.8s both;
 }
 
+@media (min-width: 801px) {
+  .flutuante {
+    display: none;
+  }
+}
+
 .flutuante svg {
   width: 1.6rem;
   height: 1.6rem;
@@ -963,9 +870,7 @@ p + p {
 
 @media (max-width: 800px) {
   .sobre-grade,
-  .consulta-grade,
-  .plano-grade,
-  .suporte-grade,
+  .leva-grade,
   .agendar-grade {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -974,36 +879,50 @@ p + p {
     max-width: 20rem;
   }
 
-  .consulta-intro {
-    position: static;
+  .etapas {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    border-top: 0;
+    border-left: 1px solid var(--ouro);
   }
 
   .etapas li {
-    grid-template-columns: 4rem minmax(0, 1fr);
-    gap: 1rem;
-    padding-left: 1.4rem;
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    column-gap: 0.6rem;
+    padding: 0 0 2rem 1.4rem;
+  }
+
+  .etapas li:last-child {
+    padding-bottom: 0;
+  }
+
+  .etapas li::before {
+    top: 0.7rem;
+    left: -4.5px;
   }
 
   .etapa-numero {
-    font-size: 2.7rem;
+    grid-row: span 2;
+    font-size: 2rem;
   }
 
-  .locais {
+  .etapas h3 {
+    margin-top: 0.3rem;
+  }
+
+  .atendimento-grade {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .locais article,
-  .locais article + article {
-    padding: 1.8rem 0;
-    border-left: 0;
+  .locais,
+  .atendimento-nota {
+    grid-column: 1;
+    grid-row: auto;
   }
 
-  .locais article + article {
-    border-top: 1px solid rgb(180 154 104 / 0.5);
-  }
-
-  .formulario {
-    border-radius: 3.5rem 1.25rem 1.25rem 1.25rem;
+  .atendimento-nota {
+    margin-top: 2rem;
   }
 }
 

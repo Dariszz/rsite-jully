@@ -123,8 +123,8 @@ export default function Agendamento() {
 
       <p className="aviso" role="status">
         {enviado
-          ? "Pedido aberto no WhatsApp. Envie a mensagem e aguarde a Jully confirmar o seu horário."
-          : "O pedido abre no seu WhatsApp, já preenchido. O horário só fica reservado depois que a Jully confirmar."}
+          ? "Pedido aberto no WhatsApp. Envie a mensagem e eu confirmo o seu horário."
+          : "O pedido abre no seu WhatsApp, já preenchido. O horário fica reservado depois que eu confirmar."}
       </p>
     </form>
   );

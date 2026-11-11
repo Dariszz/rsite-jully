@@ -63,7 +63,7 @@ export default function Feedback() {
       <p className="aviso" role="status">
         {enviado
           ? "Feedback aberto no WhatsApp. É só enviar a mensagem. Obrigada por compartilhar!"
-          : "Seu feedback vai direto para a Jully. Nada é publicado sem a sua autorização."}
+          : "Seu feedback chega direto para mim. Nada é publicado sem a sua autorização."}
       </p>
     </form>
   );
