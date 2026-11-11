@@ -514,7 +514,7 @@ p + p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(2rem, 6vw, 5rem);
-  margin-top: 0.8rem;
+  margin-top: 1.4rem;
 }
 
 .leva h3 {
@@ -582,6 +582,9 @@ p + p {
   display: grid;
   justify-items: start;
   gap: 1.4rem;
+}
+
+.espera-miolo > * {
   max-width: 40rem;
 }
 
@@ -757,7 +760,7 @@ p + p {
   padding-top: 0;
 }
 
-.duvidas-miolo {
+.duvidas-miolo > * {
   max-width: 46rem;
 }
 
