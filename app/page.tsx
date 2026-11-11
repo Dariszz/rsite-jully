@@ -128,7 +128,7 @@ export default function Pagina() {
 
         <div className="hero-texto miolo">
           <p className="hero-local">
-            Nutricionista em {cidadesLista} e online
+            Atendimentos em {cidadesLista} e online
             {site.crn && <span className="hero-crn">{site.crn}</span>}
           </p>
           <h1 className="hero-especialidades">
@@ -288,7 +288,7 @@ export default function Pagina() {
             <section className="secao agendar" id="agendar">
               <div className="miolo agendar-grade">
                 <div>
-                  <h2>Peça seu horário</h2>
+                  <h2>Agende seu horário</h2>
                   <p>
                     Escolha como prefere ser atendido e o melhor dia. O pedido
                     chega no meu WhatsApp e eu confirmo o horário com você.
