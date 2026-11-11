@@ -2,10 +2,18 @@ import Image from "next/image";
 import Agendamento from "../components/Agendamento";
 import Feedback from "../components/Feedback";
 import MesaPosta from "../components/MesaPosta";
+import Navegacao from "../components/Navegacao";
 import { depoimentos, linkWhatsApp, mensagemPadrao, site } from "../lib/site";
 
 const cidades = site.cidades.join(" e ");
 const cidadesLista = site.cidades.join(", ");
+
+const secoes = [
+  { id: "sobre", nome: "Sobre" },
+  { id: "consulta", nome: "Consulta" },
+  { id: "atendimento", nome: "Onde atendo" },
+  { id: "agendar", nome: site.listaDeEspera ? "Lista de espera" : "Agendar" },
+];
 
 const etapas = [
   {
@@ -108,19 +116,17 @@ export default function Pagina() {
         </div>
         <div className="hero-veu" aria-hidden="true" />
 
-        <nav className="topo miolo" aria-label="Principal">
-          <div className="topo-marca">
-            <Marca />
-          </div>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#consulta">Consulta</a></li>
-            <li><a href="#atendimento">Onde atendo</a></li>
-            <li><a href="#agendar">{espera ? "Lista de espera" : "Agendar"}</a></li>
-          </ul>
-        </nav>
+        <Navegacao
+          marca={<Marca />}
+          itens={secoes}
+          acao={
+            espera
+              ? { nome: "Lista de espera", href: espera, externo: true }
+              : { nome: "Agendar", href: "#agendar", externo: false }
+          }
+        />
 
-        <div className="hero-texto miolo" id="inicio">
+        <div className="hero-texto miolo">
           <p className="hero-local">
             Nutricionista em {cidadesLista} e online
           </p>
