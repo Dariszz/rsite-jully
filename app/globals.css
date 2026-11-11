@@ -369,7 +369,7 @@ p + p {
 
 @media (max-width: 800px) {
   .hero {
-    min-height: max(100svh, 52rem);
+    min-height: max(100svh, 62rem);
   }
 
   .mesa svg {
