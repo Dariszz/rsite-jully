@@ -149,7 +149,7 @@ export default function Pagina() {
               </a>
             ) : (
               <a href="#agendar" className="botao botao-claro">
-                Pedir horário
+                Agendar horário
               </a>
             )}
             <a href={whats} className="botao botao-contorno" target="_blank" rel="noopener">
