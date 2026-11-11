@@ -447,14 +447,6 @@ p + p {
   border-radius: 12rem 12rem 1.25rem 1.25rem;
 }
 
-.assinatura {
-  margin-top: 1.6rem;
-  font-family: var(--font-script);
-  font-size: 3.8rem;
-  line-height: 1;
-  color: var(--ouro-texto);
-}
-
 /* Consulta: percurso em cinco etapas */
 
 .consulta {

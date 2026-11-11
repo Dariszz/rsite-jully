@@ -166,16 +166,14 @@ export default function Pagina() {
               <h2>Prazer, sou a Jully.</h2>
               <p>
                 Sou nutricionista formada pela Universidade Federal de Juiz de
-                Fora (UFJF). Acredito em uma nutrição baseada em ciência, mas
-                que faça sentido na vida real.
+                Fora (UFJF) e pós-graduada em Obesidade e Emagrecimento.
+                Acredito em uma nutrição baseada em ciência, mas que faça
+                sentido na vida real.
               </p>
               <p>
                 Meu trabalho é ajudar você a ter uma relação mais leve e
                 consciente com a comida, respeitando a sua rotina, as suas
                 preferências e os seus objetivos.
-              </p>
-              <p className="assinatura" aria-hidden="true">
-                Jully
               </p>
             </div>
           </div>
