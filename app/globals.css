@@ -369,21 +369,23 @@ p + p {
 
 @media (max-width: 800px) {
   .hero {
-    min-height: max(100svh, 62rem);
+    --prato: min(100vw, 27rem);
+    min-height: 100svh;
+    padding-bottom: calc(var(--prato) + 1.5rem);
   }
 
   .mesa svg {
     top: auto;
     right: auto;
-    bottom: -44vw;
+    bottom: 1.5rem;
     left: 50%;
     height: auto;
-    width: 122vw;
+    width: var(--prato);
     transform: translateX(-50%);
   }
 
   .hero-veu {
-    background: linear-gradient(180deg, #343d2b 0%, rgb(52 61 43 / 0.9) 50%, rgb(52 61 43 / 0) 72%);
+    display: none;
   }
 
   .topo {
