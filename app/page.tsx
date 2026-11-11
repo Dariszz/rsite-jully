@@ -109,9 +109,9 @@ export default function Pagina() {
         <div className="hero-veu" aria-hidden="true" />
 
         <nav className="topo miolo" aria-label="Principal">
-          <a href="#inicio" className="topo-marca">
+          <div className="topo-marca">
             <Marca />
-          </a>
+          </div>
           <ul>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#consulta">Consulta</a></li>
