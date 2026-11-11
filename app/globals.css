@@ -369,23 +369,22 @@ p + p {
 
 @media (max-width: 800px) {
   .hero {
-    --prato: min(100vw, 27rem);
     min-height: 100svh;
-    padding-bottom: calc(var(--prato) + 1.5rem);
   }
 
+  /* O prato fica inteiro, no meio da tela: aparece primeiro e depois
+     vira fundo, com o texto por cima. */
   .mesa svg {
-    top: auto;
+    top: 54%;
     right: auto;
-    bottom: 1.5rem;
     left: 50%;
     height: auto;
-    width: var(--prato);
-    transform: translateX(-50%);
+    width: min(108vw, 30rem);
+    transform: translate(-50%, -50%);
   }
 
   .hero-veu {
-    display: none;
+    background: linear-gradient(180deg, rgb(52 61 43 / 0.94) 0%, rgb(52 61 43 / 0.86) 60%, rgb(52 61 43 / 0.72) 100%);
   }
 
   .topo {
